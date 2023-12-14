@@ -104,3 +104,38 @@ Operators
 bool	Does the object exist?
 operator !=	Compares if two objects refer to a different object.
 operator ==	Compares two object references to see if they refer to the same object.
+Downloading and installing Unity
+Download and install the Unity Editor from the Unity download page. The installer uses a Download Assistant and has detailed instructions to follow. If you want to download the Unity Editor using a torrent or install several versions of Unity at once, see Torrent Download, below.
+
+Unity Download Assistant
+The Unity Download Assistant is a small executable program (approximately 1 MB in size) which lets you select which components of the Unity Editor you want to download and install.
+
+If you’re not sure which components you want to install, leave the default selections, click Continue, and follow the installer’s instructions.
+
+Unity Download Assistant (leave the default selections if youre not sure which to choose)
+Unity Download Assistant (leave the default selections if you’re not sure which to choose)
+Note that on PC there is Microsoft Visual Studio Community 2015.
+
+###
+
+Installing Unity without the Download Assistant
+If you prefer, you can download and install all of the components separately, without using the Download Assistant. The components are normal installer executable programs and packages, so you may find it simpler, especially if you are a new Unity user, to use the Download Assistant. Some users, such as those wishing to automate deployment of Unity in an organization, may prefer to install from the command line.
+
+Installing Unity on Windows from command line
+The following options can be used when installing the Unity Editor and other components from command line on Windows. Note that installer command line arguments are case-sensitive.
+
+Unity Editor install
+/S	Performs a silent (no questions asked) install.
+/D=PATH	Sets the default install directory. Useful when combined with the silent install option. Default folder is C:\Program Files (x86)\Unity (32-bit) or C:\Program Files\Unity (64-bit)
+Example:
+
+UnitySetup64.exe /S /D=E:\Development\Unity
+Install Unity silently to the folder E:\Development\Unity, which will be the root of the Unity installation. The Unity editor executable will in this case be installed in E:\Development\Unity\Editor\Unity.exe. “/D” argument must be last and without quotes, even if path contains spaces.
+
+Unity Editor uninstall
+To perform a silent uninstall, run Uninstall.exe /S (for example, from command line or a script).
+
+Note that although the process will finish right away, it takes a few seconds before the files are actually removed. The reason for this is that the uninstaller is copied to a temporary location in order to be able to remove itself. Also, make sure the working directory is not inside the Unity install location, as it won’t be able to remove the folder if this is the case.
+
+Standard Assets install
+Silently install Standard Assets. If specifying folder, use the Unity “root” folder (that is, the folder containing the Editor folder, and not where Unity.exe is installed into).
